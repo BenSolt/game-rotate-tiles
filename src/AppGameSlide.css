@@ -1,0 +1,344 @@
+h1 {
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.App2 {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.Titles {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.section {
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* 4 by 4 size  300px*/
+/* 3by 3 size  225px*/
+.boardSmall {
+    width: 225px;
+    height: 225px;
+    /* width: 300px;
+    height: 300px; */
+    background-Color: #c9c9c9;
+    display: flex;
+    flex-Flow: wrap;
+    margin: 4%;
+}
+
+/* 6 by 6 size */
+.board2 {
+    width: 450px;
+    height: 370px;
+    background-Color: #c9c9c9;
+    display: flex;
+    flex-Flow: wrap;
+    margin: auto;
+    justify-content: center;
+    padding: 5px;
+}
+
+.uiHolder {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.buttonHolder {
+    margin-right: 12px;
+}
+/* ////////////////// */
+.tileRed {
+    width: 70px;
+    height: 70px;
+    box-Sizing: border-box;
+    background-Color: red;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 2px;
+}
+/* //////////////////////////// */
+
+.tileStart {
+    width: 70px;
+    height: 70px;
+    box-Sizing: border-box;
+    background-Color: gray;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 2px;
+    /* cursor: pointer */
+}
+
+.tileGreen {
+    width: 70px;
+    height: 70px;
+    box-Sizing: border-box;
+    background-Color: green;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.tileBlank {
+    width: 70px;
+    height: 70px;
+    box-Sizing: border-box;
+    background-Color: #c9c9c9;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.tileYellow {
+    width: 70px;
+    height: 70px;
+    box-Sizing: border-box;
+    background-Color: yellow;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 2px;
+}
+/* ///////////////// */
+.tileRed {
+    width: 70px;
+    height: 70px;
+    box-Sizing: border-box;
+    background-Color: red;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.letter {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.letter2 {
+    display: flex;
+    justify-content: left;
+    margin: 6px 2px;
+    /* justify-content: center; */
+}
+
+.letterSmall {
+    display: flex;
+    justify-content: left;
+    margin: 2px 4px;
+}
+
+.boardGameRules {
+    width: 260px;
+    height: 50px;
+    background-Color: #c9c9c9;
+    display: flex;
+    margin: auto;
+}
+
+.tileBlankSmall {
+    width: 50px;
+    height: 45px;
+    box-Sizing: border-box;
+    background-Color: #c9c9c9;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.tileGreenSmall {
+    width: 45px;
+    height: 45px;
+    box-Sizing: border-box;
+    background-Color: green;
+    border: 2px solid black;
+    border-radius: 4px;
+    /* cursor: pointer */
+}
+
+/* //////////// BUTTON PLAY AGAIN /////////////////////////////////////////// */
+
+.buttonGameRules {
+    margin-top: 12px;
+    /* margin-bottom: 4px; */
+    margin-right: 12px;
+    font-Size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    width: 128px;
+    height: 64px;
+    border: 2px solid black;
+    background-color: rgb(97, 97, 97);
+    border-radius: 3px;
+}
+
+.buttonGameRules:hover {
+    border: 2px solid black;
+    background-color: rgb(0, 110, 255);
+}
+
+.buttonGameRules:active {
+    border: 2px solid black;
+    background-color: rgb(0, 60, 255);
+}
+
+
+.buttonPlay {
+    margin-top: 12px;
+    /* margin-bottom: 4px; */
+    margin-left: 12px;
+    font-Size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    width: 128px;
+    height: 64px;
+    border: 2px solid black;
+    background-color: rgb(97, 97, 97);
+    border-radius: 3px;
+}
+
+.buttonPlay:hover {
+    border: 2px solid black;
+    background-color: rgb(0, 110, 255);
+}
+
+.buttonPlay:active {
+    border: 2px solid black;
+    background-color: rgb(0, 60, 255);
+}
+
+.GameboardContainer {
+    display: flex;
+    /* justify-content: space-evenly; */
+    border: 2px solid black;
+}
+.boardAnswerKeyHoriz {
+    display: flex;
+    border: 2px solid blue;
+}
+
+.boardAnswerKeyVert {
+    margin: 4%;
+    border: 2px solid blue;
+}
+
+/*//////////////////// PHONE ////////////////////////////////////////*/
+/* ///////////////////////////////////////////////////////////////// */
+/* @media only screen and (max-width: 375px) { */
+@media only screen and (max-width: 425px) {
+
+    .uiHolder {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .buttonHolder {
+        margin-right: 0;
+    }
+
+    .board2 {
+        width: 300px;
+        height: 245px;
+        background-Color: #c9c9c9;
+        display: flex;
+        flex-Flow: wrap;
+        margin: auto;
+        justify-content: center;
+        padding: 5px
+    }
+
+    .tileStart {
+        width: 45px;
+        height: 45px;
+        box-Sizing: border-box;
+        background-Color: gray;
+        border: 2px solid black;
+        border-radius: 4px;
+        margin: 2px;
+    }
+
+    .tileGreen {
+        width: 45px;
+        height: 45px;
+        box-Sizing: border-box;
+        background-Color: green;
+        border: 2px solid black;
+        border-radius: 4px;
+        margin: 2px;
+    }
+
+    .tileBlank {
+        width: 45px;
+        height: 45px;
+        box-Sizing: border-box;
+        background-Color: #c9c9c9;
+        border: 2px solid black;
+        border-radius: 4px;
+        margin: 2px;
+    }
+
+    .tileYellow {
+        width: 45px;
+        height: 45px;
+        box-Sizing: border-box;
+        background-Color: yellow;
+        border: 2px solid black;
+        border-radius: 4px;
+        margin: 2px;
+    }
+
+    .letter {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* BUTTONS////////////////// */
+    .buttonGameRules {
+        margin-top: 12px;
+        margin-bottom: 4px;
+        margin-right: 12px;
+        font-Size: 1rem;
+        color: white;
+        font-weight: bold;
+        width: 110px;
+        height: 44px;
+        border: 2px solid black;
+        background-color: rgb(97, 97, 97);
+        border-radius: 3px;
+    }
+
+    .buttonPlay {
+        margin-top: 12px;
+        margin-bottom: 4px;
+        margin-left: 12px;
+        font-Size: 1rem;
+        color: white;
+        font-weight: bold;
+        width: 110px;
+        height: 44px;
+        border: 2px solid black;
+        background-color: rgb(97, 97, 97);
+        border-radius: 3px;
+    }
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import getLetterCountMap from "./utils/utils.js";
-// import "./AppGameRotate.css";
+import "./AppGameSlide.css";
+import "./AppGameRotate.css";
 // import "./AppModal.css";
 import wordsSolve2 from './components/WordsSolve2';
 // import WordModal from './WordModal';

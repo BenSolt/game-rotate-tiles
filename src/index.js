@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import AppRotate from './AppRotate';
+import AppRotate from './AppGameRotate';
 
 import reportWebVitals from './reportWebVitals';
 import { sendToVercelAnalytics } from './vitals';
