@@ -34,46 +34,31 @@ const arr2 = [
 const SIZE = 3;
 
 const answerKeyArrPlayer = [
-    { id: 1, letter: "A", state: "tileStart" }, { id: 2, letter: 5, state: "tileStart" },
-    { id: 3, letter: addTiles2(arr), state: "tileStart" },
+    { id: 1, letter: "A", state: "tileStart" }, { id: 2, letter: "B", state: "tileStart" },
+    { id: 3, letter: addTiles(arr), state: "tileStart" },
 ]
 
 
-function addTiles1(array) {
+function addTiles(array) {
     let sum1 = 0
     let sum2 = 0
-    let sum3 = 0
     const arrVert = []
     for (let i = array.length - 1; i > 0; i--) {
 
-        // if (i === 0 && 1 && 2) {
-        //     sum1 = arr[i].letter + arr[i+1].letter + arr[i + 2].letter
-        //     console.log("NumAdded1:", sum1)
+        // if (i === 6 && 7 && 8) {
+        //     sum3 = arr[i].letter + arr[i + 1].letter + arr[i + 2].letter
         // }
-        if (i === 3 && 4 && 5) {
-            sum2 = arr[i].letter + arr[i + 1].letter + arr[i + 2].letter
+
+        if (i === 1 && 2) {
+            sum1 = arr[i].letter + arr[i + 1].letter
         }
-        if (i === 6 && 7 && 8) {
-            sum3 = arr[i].letter + arr[i + 1].letter + arr[i + 2].letter
-        }
-
-    }
-    arrVert.push(sum2, sum3)
-    console.log("ARRVERT:", arrVert)
-    return sum2
-}
-
-function addTiles2(array) {
-    let sum3 = 0
-    const arrVert = []
-    for (let i = array.length - 1; i > 0; i--) {
-
-        if (i === 6 && 7 && 8) {
-            sum3 = arr[i].letter + arr[i + 1].letter + arr[i + 2].letter
+        if (i === 1 && 2) {
+            sum2 = arr2[i].letter + arr2[i + 1].letter
         }
     }
-    arrVert.push(sum3)
-    return sum3
+    arrVert.push(sum1)
+    arrVert.push(sum2)
+    return sum1 + sum2
 }
 
 function randomLetrs(length) {
@@ -90,12 +75,8 @@ function randomLetrs(length) {
 /////////////////////////////////////////////////////////////////////////////
 function letterCenter(length) {
     var result = "";
-    // var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    // var charactersLength = characters.length;
     for (var i = 0; i < length; i++) {
-        //result += characters.charAt(Math.floor(Math.random() * charactersLength));
         result += "X"
-
     }
     return result;
 }
@@ -135,14 +116,10 @@ function swap(cards, targetIndex, blankIndex) {
 
 function App() {
 
-    const [blankIndex, setBlankIndex] = useState(arr[0].id);
     const [cards, setCards] = useState(arr);
     const [cards2, setCards2] = useState(arr2);
-    const [moves, setMoves] = useState(0);
 
     const [color, setColor] = useState('tileStart');
-    let isShown = false;
-
     const [arrPlayer, setArrPlayer] = useState(answerKeyArrPlayer);
 
     //////////////////////////////////////////////////
@@ -154,16 +131,6 @@ function App() {
         }
     };
     /////////////////////////////////////////////////
-
-
-    function handleCardClick(targetIndex) {
-        // if (canSwap(targetIndex, blankIndex)) {
-        //     startTimer();
-        //     setMoves(moves + 1)
-        //     setCards((cards) => swap(cards, targetIndex, blankIndex));
-        //     setBlankIndex(targetIndex);
-        // }
-    };
 
     function handleCardClickA(targetIndex) {
         if (targetIndex === 4) {
