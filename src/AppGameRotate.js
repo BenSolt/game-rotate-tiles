@@ -35,7 +35,7 @@ const SIZE = 3;
 
 const answerKeyArrPlayer = [
     { id: 1, letter: "A", state: "tileStart" }, { id: 2, letter: "B", state: "tileStart" },
-    { id: 3, letter: addTiles(arr), state: "tileStart" },
+    { id: 3, letter: "C", state: "tileStart" },
 ]
 
 
@@ -50,10 +50,10 @@ function addTiles(array) {
         // }
 
         if (i === 1 && 2) {
-            sum1 = arr[i].letter + arr[i + 1].letter
+            sum1 = arr[i].letter 
         }
         if (i === 1 && 2) {
-            sum2 = arr2[i].letter + arr2[i + 1].letter
+            sum2 = arr2[i].letter 
         }
     }
     arrVert.push(sum1)
@@ -140,7 +140,11 @@ function App() {
             //console.log(getPos(1))
         }
         arrPlayer[0].letter = cards[3].letter
-        //cards[4].letter = cards[3].letter
+
+        let add = arrPlayer[0].letter = cards[3].letter
+        let add2 = arrPlayer[1].letter = cards2[3].letter
+
+        arrPlayer[2].letter = add + add2
     };
 
 
@@ -152,6 +156,11 @@ function App() {
             setCards2((cards2) => swap(cards2, 1, 3));
         }
         arrPlayer[1].letter = cards2[3].letter
+
+        let add = arrPlayer[0].letter = cards[3].letter
+        let add2 = arrPlayer[1].letter = cards2[3].letter
+
+        arrPlayer[2].letter = add + add2
     };
 
 
@@ -196,61 +205,6 @@ function App() {
         }
     }
 
-    // MODAL WON GAME ////////////////////////////////////////////////////////
-    function gameOverWon() {
-        var modalWin = document.getElementById("myModalWin");
-        // If modalWin exists run code.
-        if (modalWin !== null) {
-            setTimeout(function () {
-                stopTimer();
-            }, 10)
-            setTimeout(function () {
-                modalWin.style.display = "block";
-            }, 500)
-        }
-    }
-
-    // TIMER ////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    let [running, setRunning] = useState(false);
-    let [time, setTime] = useState(0);
-    let timerId = useRef(null);
-
-    function convert(ms) {
-        let milliseconds = Math.floor((ms % 1000) / 10);
-        let seconds = Math.floor((ms / 1000) % 60);
-        let minutes = Math.floor((ms / (1000 * 60)) % 60);
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-        milliseconds = milliseconds < 10 ? "0" + milliseconds : milliseconds;
-
-        return minutes + ":" + seconds + ":" + milliseconds;
-    }
-
-    function startTimer() {
-        setRunning(true);
-    }
-    function stopTimer() {
-        setRunning(false);
-    }
-
-    useEffect(() => {
-        if (running) {
-            timerId.current = setTimeout(() => {
-                setTime(time + 37);
-            }, 37);
-        } else {
-            clearTimeout(timerId.current);
-        }
-
-        return () => {
-            if (timerId.current) {
-                clearTimeout(timerId.current);
-            }
-        };
-    });
-
-    //END TIMER//////////////////////////////////////////////////////////
 
     return (
         <div className="App2">
